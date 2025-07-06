@@ -22,14 +22,14 @@ function Home() {
         <p className="description">
           කැඩුනු සිත් සනසන ඔබට සෙවනක් වන ඔබගේ සෙවනාරාමය
           <br />
-          අපගේ සේවනාරාමය  කටයුතු, ධර්ම දේශනා, සහ පූජා ගැන තොරතුරු
+          අපගේ සේවනාරාමය  කටයුතු, තොරතුරු
         </p>
 
         <button
           className="donate-btn"
           onClick={() => (window.location.href = '/main')}
         >
-          දානය කරන්න
+          C...කරන්න
           <span className="btn-effect"></span>
         </button>
       </div>

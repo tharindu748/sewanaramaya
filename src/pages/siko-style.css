@@ -1,0 +1,259 @@
+:root {
+  --siko-blue: #5f72ff;
+  --gune-purple: #b84fff;
+  --sadu-dark: #222831;
+  --sadu-white: #f4f4ff;
+  --sensor-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --radius: 20px;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Comic Neue', 'Segoe UI', cursive;
+  background: linear-gradient(135deg, #fff0f5, #e0f7ff);
+  color: var(--sadu-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--siko-blue), var(--gune-purple));
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-shadow: 2px 2px #00000033;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-outline {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: white;
+  color: var(--siko-blue);
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: var(--sensor-shadow);
+}
+
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: var(--sadu-dark);
+}
+
+.section-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Posts Grid */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.post-card {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--sensor-shadow);
+  transition: var(--transition);
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.post-image::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.post-category {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  margin: 10px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.post-content {
+  padding: 1.5rem;
+}
+
+.post-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-content p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.read-more {
+  color: var(--siko-blue);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.read-more:hover {
+  color: var(--gune-purple);
+}
+
+/* Testimonials */
+.testimonials-section {
+  margin-top: 4rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--sensor-shadow);
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.testimonial-author img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.testimonial-author h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.testimonial-author span {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--siko-blue), var(--gune-purple));
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: var(--radius);
+  margin-top: 4rem;
+}
+
+.cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .btn-primary, .btn-outline {
+    width: 100%;
+  }
+}
